@@ -10,7 +10,9 @@ class App extends React.Component {
             <Router>
                 <div className="App">
                     <Header/>
-                    <p>this is a body</p>
+                    <div className="Body">
+                        <p>this is a body</p>
+                    </div>
                     <Footer/>
                 </div>
             </Router>

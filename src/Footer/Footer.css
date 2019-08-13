@@ -4,10 +4,14 @@
     width: 100%;
 }
 
+.Footer .img{
+    display:inline-block;
+    padding: 1vh;
+    margin: 1vh 10vw;
+}
+
 .Footer-github,
 .Footer-linkedin,
 .Footer-twitter{
-    display:inline-block;
-    padding: 1%;
-    margin: 1% 10%;
+    width: 8vh;
 }

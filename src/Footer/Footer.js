@@ -11,17 +11,21 @@ export class Footer extends React.Component {
             <div className="Footer">
                 <div className="center">
                     <ul>
+                        <div className={'img'}>
                         <a href='https://github.com/ColdFerrin'><img src={github} className="Footer-github"
                                                                      alt="github"/></a>
+                        </div>
 
-
+                        <div className={'img'}>
                         <a href='https://www.linkedin.com/in/ferrinkatz/'><img src={linkedin}
                                                                                className="Footer-linkedin"
                                                                                alt="linkedin"/></a>
-
-                        <a href='https://twitter.com/coldferrin'> <img src={twitter}
+                        </div>
+                        <div className={'img'}>
+                        <a href='https://twitter.com/coldferrin'><img src={twitter}
                                                                        className="Footer-twitter"
                                                                        alt="twitter"/></a>
+                        </div>
                     </ul>
                 </div>
             </div>

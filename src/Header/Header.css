@@ -1,0 +1,27 @@
+.Header {
+    display: inline-block;
+    text-align: center;
+    width: 70vw;
+    align-content: center;
+}
+
+.Header-Home,
+.Header-Resume,
+.Header-Contact {
+    display:inline-block;
+    text-decoration: none;
+}
+
+.Header-Left,
+.Header-Right {
+    display:inline-block;
+}
+
+.Header-Left {
+    float: Left;
+}
+
+.Header-Right {
+    float: right;
+}
+
