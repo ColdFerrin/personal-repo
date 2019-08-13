@@ -68,6 +68,12 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 "# personal-repo" 
 
-### Push subdirectory to github page
+## Build Github Page
 
-git subtree push --prefix=build github-site master
+1) `npm run build`
+
+1) `git checkout -- build/CNAME`
+
+1) 
+
+git subtree push --prefix=build https://github.com/ColdFerrin/ColdFerrin.github.io.git master
