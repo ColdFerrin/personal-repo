@@ -74,6 +74,10 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 1) `git checkout -- build/CNAME`
 
-1) 
+1) `git add -A`
 
-git subtree push --prefix=build https://github.com/ColdFerrin/ColdFerrin.github.io.git master
+1) `git commit`
+
+1) `git push`
+
+1) `git subtree push --prefix=build https://github.com/ColdFerrin/ColdFerrin.github.io.git master`
