@@ -1,0 +1,13 @@
+.Footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.Footer-github,
+.Footer-linkedin,
+.Footer-twitter{
+    display:inline-block;
+    padding: 1%;
+    margin: 1% 10%;
+}
