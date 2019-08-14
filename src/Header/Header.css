@@ -9,7 +9,6 @@
 .Header-Resume,
 .Header-Contact {
     display:inline-block;
-    text-decoration: none;
 }
 
 .Header-Left,
@@ -25,3 +24,15 @@
     float: right;
 }
 
+.Link {
+    text-decoration: none;
+    padding: 2vh 4vh;
+    color: black;
+}
+
+.Link-surround {
+    border-style: solid;
+    border-width: 1px;
+    border-color: darkgray;
+    color: lightgrey;
+}

@@ -1,0 +1,39 @@
+.Resume {
+    font-family: Garamond, Serif;
+    font-size: 14pt;
+    text-align: left;
+}
+
+table {
+    width: 70vw;
+    margin: auto;
+    vertical-align: top;
+}
+
+.Resume .Title {
+    font-size: 20pt;
+    text-align: center;
+}
+
+.Resume .Center {
+    text-align: center;
+}
+
+.Resume .Section-Header {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    font-weight: bold;
+}
+
+.Resume .Section-Info {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+
+.Resume p {
+    margin: 4px;
+}
+
+

@@ -9,15 +9,34 @@ export class Header extends React.Component {
                 <div className="Header">
                     <div className="Header-Left">
                         <div className="Header-Home">
-                            <Link to="/" >Home</Link>
+                            <Link to="/" style={{textDecoration: 'none', color: 'black'}}>
+                                <div className={'Link-surround'}>
+                                    <p className={'Link'}>
+                                        Home
+                                    </p>
+                                </div>
+                            </Link>
                         </div>
                     </div>
                     <div className="Header-Right">
                         <div className="Header-Resume">
-                            <Link to="/resume">Resume</Link>
+                            <Link to="/resume" style={{textDecoration: 'none', color: 'black'}}>
+
+                                <div className={'Link-surround'}>
+                                    <p className={'Link'}>
+                                        Resume
+                                    </p>
+                                </div>
+                            </Link>
                         </div>
                         <div className="Header-Contact">
-                            <Link to="/contact">Contact Me</Link>
+                            <Link to="/contact" style={{textDecoration: 'none', color: 'black'}}>
+                                <div className={'Link-surround'}>
+                                    <p className={'Link'}>
+                                        Contact Me
+                                    </p>
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 </div>
