@@ -1,7 +1,8 @@
 .Resume {
-    font-family: Garamond, Serif;
+    font-family: Garamond, serif;
     font-size: 14pt;
     text-align: left;
+    vertical-align: top;
 }
 
 table {
@@ -22,18 +23,33 @@ table {
 .Resume .Section-Header {
     display: inline-block;
     position: relative;
-    vertical-align: top;
     font-weight: bold;
 }
 
 .Resume .Section-Info {
     display: inline-block;
     position: relative;
-    vertical-align: top;
 }
 
 .Resume p {
-    margin: 4px;
+    margin: 5px;
+}
+
+@media (max-width: 750px) {
+    table {
+        width: 95vw;
+    }
+}
+
+@media (max-width: 470px) {
+    .Resume {
+        font-size: 10pt;
+    }
+
+    .Resume .Title {
+        font-size: 14pt;
+        text-align: center;
+    }
 }
 
 

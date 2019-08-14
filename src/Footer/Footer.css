@@ -1,19 +1,35 @@
 .Footer {
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
+    z-index: 10;
+    background: #eee;
+    -webkit-box-shadow: 0 7px 8px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 7px 8px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 7px 8px rgba(0, 0, 0, 0.12);
 }
 
 .Footer .img{
     display:inline-block;
     padding: 1vh;
-    margin: 1vh 10vw;
+    margin: 0 10vw;
+}
+
+.Footer ul {
+    padding: 0;
 }
 
 .Footer-github,
 .Footer-linkedin,
 .Footer-twitter{
-    width: 4vw;
+    height: 8vh;
+}
+
+@media (max-width: 560px) {
+    .Footer .img {
+        margin: 0 3vw;
+    }
 }
 
 
