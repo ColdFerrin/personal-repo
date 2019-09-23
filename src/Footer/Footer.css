@@ -1,4 +1,6 @@
 .Footer {
+    display: flex;
+    justify-content: center;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -24,6 +26,12 @@
 .Footer-linkedin,
 .Footer-twitter{
     height: 8vh;
+}
+
+@media (max-width: 800px) {
+    .Footer .img  {
+        margin: 0 6vw;
+    }
 }
 
 @media (max-width: 560px) {
