@@ -36,6 +36,99 @@ export class Resume extends React.Component {
                         </td>
                     </tr>
 
+
+                    <tr>
+                        <td className="Section-Header">
+                            <p>SKILLS</p>
+                        </td>
+                        <td>
+                            <p><i>Programming Languages:</i></p>
+                        </td>
+                        <td colSpan={2} className="Section-Info">
+                            <p>Java, C++, C, C#, Python, JavaScript, MySQL, PostgreSQL, HTML, CSS, MATLAB, Lisp, Bash,
+                                GraphQL</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td className="Section-Header">
+                            <p></p>
+                        </td>
+                        <td>
+                            <p><i>Libraries:</i></p>
+                        </td>
+                        <td colSpan={2} className="Section-Info">
+                            <p>Spring, Spring Boot, Spring JPA, Hibernate, Spring Security, jQuery, React, Serverless,
+                                AWS API</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td className="Section-Header">
+                            <p></p>
+                        </td>
+                        <td>
+                            <p><i>Databases:</i></p>
+                        </td>
+                        <td colSpan={2} className="Section-Info">
+                            <p>PostgreSQL, MySQL, Elasticsearch, Redis, Kafka, H2</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td className="Section-Header">
+                            <p></p>
+                        </td>
+                        <td>
+                            <p><i>Tools:</i></p>
+                        </td>
+                        <td colSpan={2} className="Section-Info">
+                            <p>Git, Emma, Kafka Connect, AWS, Lambdas, App Sync, S3, SES</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td className="Section-Header">
+                            <p></p>
+                        </td>
+                        <td>
+                            <p><i>IDEs:</i></p>
+                        </td>
+                        <td colSpan={2} className="Section-Info">
+                            <p>Intellij, Visual Studio, Eclipse</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td className="Section-Header">
+                            <p></p>
+                        </td>
+                        <td>
+                            <p><i>Operating Systems:</i></p>
+                        </td>
+                        <td colSpan={2} className="Section-Info">
+                            <p>Windows, Linux/Unix, Mac OS</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td className="Section-Header">
+                            <p></p>
+                        </td>
+                        <td>
+                            <p><i>Office Software:</i></p>
+                        </td>
+                        <td colSpan={2} className="Section-Info">
+                            <p>Confluence, Jira, Office Suite</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td className="Section-Header">
+                            <p></p>
+                        </td>
+                        <td>
+                            <p><i>Languages:</i></p>
+                        </td>
+                        <td colSpan={2} className="Section-Info">
+                            <p>Russian (Conversational)</p>
+                        </td>
+                    </tr>
+
+
                     <tr>
                         <td>
                             <p className="Section-Header">ENGINEERING EXPERIENCE</p>
@@ -190,96 +283,6 @@ export class Resume extends React.Component {
                         </td>
                     </tr>
 
-                    <tr>
-                        <td className="Section-Header">
-                            <p>SKILLS</p>
-                        </td>
-                        <td>
-                            <p><i>Programming Languages:</i></p>
-                        </td>
-                        <td colSpan={2} className="Section-Info">
-                            <p>Java, C++, C, C#, Python, JavaScript, MySQL, PostgreSQL, HTML, CSS, MATLAB, Lisp, Bash,
-                                GraphQL</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className="Section-Header">
-                            <p></p>
-                        </td>
-                        <td>
-                            <p><i>Libraries:</i></p>
-                        </td>
-                        <td colSpan={2} className="Section-Info">
-                            <p>Spring, Spring Boot, Spring JPA, Hibernate, Spring Security, jQuery, React, Serverless,
-                                AWS API</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className="Section-Header">
-                            <p></p>
-                        </td>
-                        <td>
-                            <p><i>Databases:</i></p>
-                        </td>
-                        <td colSpan={2} className="Section-Info">
-                            <p>PostgreSQL, MySQL, Elasticsearch, Redis, Kafka, H2</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className="Section-Header">
-                            <p></p>
-                        </td>
-                        <td>
-                            <p><i>Tools:</i></p>
-                        </td>
-                        <td colSpan={2} className="Section-Info">
-                            <p>Git, Emma, Kafka Connect, AWS, Lambdas, App Sync, S3, SES</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className="Section-Header">
-                            <p></p>
-                        </td>
-                        <td>
-                            <p><i>IDEs:</i></p>
-                        </td>
-                        <td colSpan={2} className="Section-Info">
-                            <p>Intellij, Visual Studio, Eclipse</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className="Section-Header">
-                            <p></p>
-                        </td>
-                        <td>
-                            <p><i>Operating Systems:</i></p>
-                        </td>
-                        <td colSpan={2} className="Section-Info">
-                            <p>Windows, Linux/Unix, Mac OS</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className="Section-Header">
-                            <p></p>
-                        </td>
-                        <td>
-                            <p><i>Office Software:</i></p>
-                        </td>
-                        <td colSpan={2} className="Section-Info">
-                            <p>Confluence, Jira, Office Suite</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className="Section-Header">
-                            <p></p>
-                        </td>
-                        <td>
-                            <p><i>Languages:</i></p>
-                        </td>
-                        <td colSpan={2} className="Section-Info">
-                            <p>Russian (Conversational)</p>
-                        </td>
-                    </tr>
                     <tr>
                         <td className="Section-Header">
                             <p>LEADERSHIP</p>
