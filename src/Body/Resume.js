@@ -10,8 +10,6 @@ export class Resume extends React.Component {
                     <tr>
                         <th colSpan={4}>
                             <p className="Title">Ferrin Katz</p>
-                            <p className="Center">(323) 854-7793</p>
-                            <p className="Center">ferrinkatz@ferrinkatz.com</p>
                         </th>
                     </tr>
                     <tr>
@@ -26,7 +24,6 @@ export class Resume extends React.Component {
                         <td className="Section-Info">
                             <p>Prescott, AZ</p>
                             <p>May 2020</p>
-                            <p>GPA: 3.1/4.0</p>
                         </td>
                     </tr>
                     <tr>
@@ -174,7 +171,7 @@ export class Resume extends React.Component {
                         </td>
                         <td>
                             <p>Los Angeles, CA</p>
-                            <p>Summer 2019</p>
+                            <p>Summer 2014</p>
                         </td>
                     </tr>
                     <tr>
