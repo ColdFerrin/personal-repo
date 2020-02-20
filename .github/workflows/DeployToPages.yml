@@ -24,7 +24,7 @@ jobs:
       run: echo "::set-output name=dtVal::$(date +'%Y-%m-%d_%H.%M')"
       
     - name: Deploy to Github Pages
-      run: 
+      run: |
         git checkout -- build/CNAME
         git add -A
         git commit -m "Auto build ${{steps.getdate.outputs.dtVal}}"
