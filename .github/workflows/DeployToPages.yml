@@ -31,7 +31,7 @@ jobs:
         git add -A
         git commit -m "Auto build ${{steps.getdate.outputs.dtVal}}"
         git push
-        git subtree push --prefix=build https://scuzzlebuzzle:${{secrets.key}}@github.com/ColdFerrin/ColdFerrin.github.io.git master
+        git subtree push --prefix=build https://ColdFerrin:${{secrets.key}}@github.com/ColdFerrin/ColdFerrin.github.io.git master
 
       env:
         CI: true
