@@ -25,6 +25,8 @@ jobs:
       
     - name: Deploy to Github Pages
       run: |
+        git config --global credential.helper store
+        ps: Add-Content "$HOME\.git-credentials" "https://${{ secrets.key }}:x-oauth-basic@github.com`n"
         git checkout -- build/CNAME
         git config user.email "ferrinkatz@ferrinkatz.com"
         git config user.name "ColdFerrin"
