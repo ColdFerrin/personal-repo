@@ -26,6 +26,8 @@ jobs:
     - name: Deploy to Github Pages
       run: |
         git checkout -- build/CNAME
+        git config user.email "ferrinkatz@ferrinkatz.com"
+        git config user.name "ColdFerrin"
         git add -A
         git commit -m "Auto build ${{steps.getdate.outputs.dtVal}}"
         git push
