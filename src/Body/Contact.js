@@ -67,7 +67,10 @@ export class Contact extends React.Component{
                 alert("Message Sent.");
                 this.resetForm()
             }else if(response.data.status === 'fail'){
-                alert("Message failed to send.")
+                alert("Message failed to send.");
+            }else {
+                alert("Something Happened.");
+                console.log(response);
             }
         })
     }
