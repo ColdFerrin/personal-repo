@@ -37,6 +37,6 @@ jobs:
       with:
         github_token: ${{ secrets.key }}
         directory: /build
-        
+        repository: https://github.com/ColdFerrin/ColdFerrin.github.io.git
       env:
         CI: true
