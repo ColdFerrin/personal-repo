@@ -58,21 +58,24 @@ export class Contact extends React.Component{
         data.reply_to = this.state.email;
         data.message = this.state.message;
 
-        Axios({
+        fetch('https://bap6ezx09d.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer',{
             method: "POST",
-            url:"https://bap6ezx09d.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer",
-            data:  data
-        }).then((response)=>{
-            if (response.data.status === 'success'){
+            body: JSON.stringify(data),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+        }).then(
+            (response) => (response.json())
+        ).then((response)=>{
+            if (response.status === 'success'){
                 alert("Message Sent.");
                 this.resetForm()
-            }else if(response.data.status === 'fail'){
-                alert("Message failed to send.");
-            }else {
-                alert("Something Happened.");
-                console.log(response);
+            }else if(response.status === 'fail'){
+                alert("Message failed to send.")
             }
-        })
+        });
+
     }
 }
 
