@@ -64,13 +64,11 @@ export class Contact extends React.Component{
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-        }).then(
-            (response) => (response.json())
-        ).then((response)=>{
-            if (response.status === 'success'){
+        }).then((response)=>{
+            if (response.status === 200){
                 alert("Message Sent.");
                 this.resetForm()
-            }else if(response.status === 'fail'){
+            }else{
                 alert("Message failed to send.")
             }
         });
