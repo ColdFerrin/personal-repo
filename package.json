@@ -41,5 +41,6 @@
   "bugs": {
     "url": "https://github.com/ColdFerrin/personal-repo/issues"
   },
-  "homepage": "https://ferrinkatz.com"
+  "homepage": "https://ferrinkatz.com",
+  "PUBLIC_URL": "https://ferrinkatz.com"
 }
