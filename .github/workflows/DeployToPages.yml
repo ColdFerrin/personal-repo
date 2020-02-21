@@ -33,11 +33,12 @@ jobs:
         git push
 
     - name: Deploy
-        uses: s0/git-publish-subdir-action@master
-        env:
-          REPO: git@github.com:ColdFerrin/ColdFerrin.github.io.git
-          BRANCH: master
-          FOLDER: build
-          SSH_PRIVATE_KEY: ${{ secrets.ssh-key }}
+      uses: s0/git-publish-subdir-action@master
       env:
-        CI: true
+        REPO: git@github.com:ColdFerrin/ColdFerrin.github.io.git
+        BRANCH: master
+        FOLDER: build
+        SSH_PRIVATE_KEY: ${{ secrets.ssh_key }}
+
+    env:
+      CI: true
