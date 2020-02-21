@@ -2,7 +2,7 @@ name: Node.js CI
 
 on:
   push:
-    paths-ignore: 
+    paths-ignore:
       - build/*
 
 jobs:
@@ -18,11 +18,11 @@ jobs:
         node-version: 12.x
     - run: npm install
     - run: npm run build --if-present
-      
+
     - name: Get Current DateTime
       id: getdate
       run: echo "::set-output name=dtVal::$(date +'%Y-%m-%d_%H.%M')"
-      
+
     - name: Add Changes to repo
       run: |
         git checkout -- build/CNAME
@@ -31,12 +31,12 @@ jobs:
         git add -A
         git commit -m "Auto build ${{steps.getdate.outputs.dtVal}}"
         git push
-        
+
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.key }}
-        directory: /build
+        directory: build
         repository: https://github.com/ColdFerrin/ColdFerrin.github.io.git
       env:
         CI: true
