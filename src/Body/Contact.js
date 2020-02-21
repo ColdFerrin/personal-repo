@@ -51,6 +51,7 @@ export class Contact extends React.Component{
         this.setState({name:'', email:'', message:''})
     }
 
+
     handleSubmit(event) {
         event.preventDefault();
         const data = {};
