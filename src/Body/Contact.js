@@ -1,5 +1,4 @@
 import React from 'react';
-import Axios from 'axios';
 import './Contact.css';
 
 export class Contact extends React.Component{
