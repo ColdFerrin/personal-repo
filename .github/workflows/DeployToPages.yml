@@ -36,6 +36,7 @@ jobs:
       uses: s0/git-publish-subdir-action@master
       env:
         REPO: git@github.com:ColdFerrin/ColdFerrin.github.io.git
+        BRANCH: master
         FOLDER: build
         SSH_PRIVATE_KEY: ${{ secrets.ssh_key }}
 
