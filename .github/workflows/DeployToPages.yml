@@ -32,11 +32,12 @@ jobs:
         git commit -m "Auto build ${{steps.getdate.outputs.dtVal}}"
         git push
 
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.key }}
-        directory: build
-        repository: ColdFerrin/ColdFerrin.github.io
+    - name: Deploy
+        uses: s0/git-publish-subdir-action@master
+        env:
+          REPO: git@github.com:ColdFerrin/ColdFerrin.github.io.git
+          BRANCH: master
+          FOLDER: build
+          SSH_PRIVATE_KEY: ${{ secrets.ssh-key }}
       env:
         CI: true
