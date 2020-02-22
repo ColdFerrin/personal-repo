@@ -65,7 +65,6 @@ export class Contact extends React.Component{
                 'Content-Type': 'application/json'
             },
         }).then((response)=>{
-            console.log(response);
             if (response.status === 200){
                 alert("Message Sent.");
                 this.resetForm()
