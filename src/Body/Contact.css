@@ -1,0 +1,27 @@
+.contact{
+    width: 100%;
+    text-align: center;
+}
+
+#contact-form{
+    display: inline-block;
+    margin: 0 auto;
+    padding: 3px;
+    width: 70%;
+}
+
+.left{
+    float: left;
+    width: 36%;
+    text-align: right;
+}
+
+.right{
+    float: right;
+    width: 63%;
+    text-align: left;
+}
+
+.form-control{
+    width: 50%;
+}

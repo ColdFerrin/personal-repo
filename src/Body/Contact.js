@@ -16,18 +16,40 @@ export class Contact extends React.Component{
             <div className={"Contact"}>
             <h2>If you need to contact me?</h2>
                 <form id="contact-form" onSubmit={this.handleSubmit.bind(this)}>
-                    <div className="form-group">
-                        <label htmlFor="name">Name</label>
-                        <input type="text" className="form-control" value={this.state.name} onChange={this.onNameChange.bind(this)} />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="exampleInputEmail1">Email address</label>
-                        <input type="email" className="form-control" aria-describedby="emailHelp" value={this.state.email} onChange={this.onEmailChange.bind(this)} />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="message">Message</label>
-                        <textarea className="form-control" rows="5" value={this.state.message} onChange={this.onMessageChange.bind(this)} />
-                    </div>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <div className="form-group">
+                                    <td className="left">
+                                        <label htmlFor="name">Name: </label>
+                                    </td>
+                                    <td className="right">
+                                        <input type="text" className="form-control" value={this.state.name} onChange={this.onNameChange.bind(this)} />
+                                    </td>
+                                </div>
+                            </tr>
+                            <tr>
+                                <div className="form-group">
+                                    <td className="left">
+                                        <label htmlFor="exampleInputEmail1">Email Address: </label>
+                                    </td>
+                                    <td className="right">
+                                        <input type="email" className="form-control" aria-describedby="emailHelp" value={this.state.email} onChange={this.onEmailChange.bind(this)} />
+                                    </td>
+                                </div>
+                            </tr>
+                            <tr>
+                                <div className="form-group">
+                                    <td className="left">
+                                        <label htmlFor="message">Message: </label>
+                                    </td>
+                                    <td className="right">
+                                        <textarea className="form-control" rows="5" value={this.state.message} onChange={this.onMessageChange.bind(this)} />
+                                    </td>
+                                </div>
+                            </tr>
+                        </tbody>
+                    </table>
                     <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
             </div>
