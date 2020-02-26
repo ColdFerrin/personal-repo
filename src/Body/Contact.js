@@ -57,7 +57,7 @@ export class Contact extends React.Component{
         data.reply_to = this.state.email;
         data.message = this.state.message;
 
-        fetch('https://bap6ezx09d.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer',{
+        fetch('https://cdr3q63x45.execute-api.us-east-1.amazonaws.com/prod/static-site-mailer',{
             method: "POST",
             body: JSON.stringify(data),
             headers: {
