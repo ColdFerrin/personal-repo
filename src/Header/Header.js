@@ -1,6 +1,7 @@
 import React from 'react';
 import './Header.css'
 import {Link} from "react-router-dom";
+import logo from "./ferrinlogo.svg"
 
 export class Header extends React.Component {
     render() {
@@ -10,11 +11,10 @@ export class Header extends React.Component {
                     <div className="Header-Box">
                         <div className="Header-Left">
                             <div className="Header-Home">
-                                <Link to="/" style={{textDecoration: 'none', color: 'black'}}>
+                                <Link to="/">
                                     <div className={'Link-surround'}>
-                                        <p className={'Link'}>
-                                            Home
-                                        </p>
+                                        <img src={logo} className="logo"
+                                             alt="logo"/>
                                     </div>
                                 </Link>
                             </div>
@@ -22,7 +22,6 @@ export class Header extends React.Component {
                         <div className="Header-Right">
                             <div className="Header-Resume">
                                 <Link to="/resume" style={{textDecoration: 'none', color: 'black'}}>
-
                                     <div className={'Link-surround'}>
                                         <p className={'Link'}>
                                             Resume
