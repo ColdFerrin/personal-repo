@@ -1,6 +1,7 @@
 import React from 'react';
 import './Index.css';
 import Ferrin from "./Ferrin.png"
+import sig from "./Sketch003.png"
 
 export class Index extends React.Component{
     render () {
@@ -21,7 +22,7 @@ export class Index extends React.Component{
                         <p>I am seeking a challenging and competitive full time position in the Los Angeles area, where i can serve your company and develop a fulfilling career.</p>
                         <p></p>
                         <p>Yours Respectfully,</p>
-
+                        <img className={"signature"} src={sig} alt={"signature"}/>
                     </div>
                 </div>
             </div>
