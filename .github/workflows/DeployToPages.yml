@@ -25,7 +25,6 @@ jobs:
 
     - name: Add Changes to repo
       run: |
-        git checkout -- build/CNAME
         git config user.email "ferrinkatz@ferrinkatz.com"
         git config user.name "ColdFerrin"
         git add -A
