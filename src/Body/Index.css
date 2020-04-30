@@ -1,0 +1,51 @@
+.Body-Box {
+    display: inline-block;
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    vertical-align: top;
+}
+
+.Body-Left,
+.Body-Right {
+    display:inline-block;
+}
+
+.Body-Left {
+    width: 34vw;
+    float: Left;
+}
+
+.Body-Right {
+    width: 34vw;
+    float: right;
+}
+
+.Body-content {
+    text-align: center;
+}
+
+.Body-Img {
+    align-content: center;
+    height: 70vh;
+}
+
+.color {
+    color: #999999;
+}
+
+.right-sp {
+    margin: 0 0 0 1pt;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+@media (max-width: 560px) {
+    .Body-Box {
+        width: 100%;
+        text-align: center;
+        margin: auto;
+    }
+}
