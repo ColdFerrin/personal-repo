@@ -3,7 +3,17 @@ name: Node.js CI
 on:
   push:
     paths-ignore:
-      - build/*
+      - '.github/project.yaml'
+      - 'README.md'
+      - '.idea/*'
+      - 'build/*'
+      - 'public/*'
+      - '.gitignore'
+      - 'package.json'
+      - 'package-lock.json'
+      - LICENSE
+    branches:
+      - master
 
 jobs:
   build:
