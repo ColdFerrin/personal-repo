@@ -11,12 +11,12 @@
 }
 
 .Body-Left {
-    width: 34vw;
+    width: 20vw;
     float: Left;
 }
 
 .Body-Right {
-    width: 33vw;
+    width: 45vw;
     float: right;
 }
 
@@ -26,7 +26,7 @@
 
 .Body-Img {
     align-content: center;
-    height: 70vh;
+    width: 18vw;
 }
 
 .color {
@@ -58,10 +58,20 @@ h1 {
     font-size: 30px;
 }
 
-@media (max-width: 560px) {
+@media (max-width: 680px) {
     .Body-Box {
         width: 100%;
         text-align: center;
         margin: auto;
+    }
+
+    .Body-Left {
+        width: 45vw;
+        float: Left;
+    }
+
+    .Body-Img {
+        align-content: center;
+        width: 44vw;
     }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Resume.css';
+import pdf from './pdf.svg';
 
 export class Resume extends React.Component {
     render() {
@@ -294,8 +295,23 @@ export class Resume extends React.Component {
                             <p>Team Leader, ERAU VEX Robotics Club Team White, 2016 - 2018 </p>
                         </td>
                     </tr>
+                    <tr>
+                        <td colSpan={4}>
+                            <div className={"btn-res"}>
+                                <p className={'Link-res'}>
+                                    Download file
+                                </p>
+                                <a style={{textDecoration: 'none', color: 'black'}} href={"https://ferrin-katz-files.s3.amazonaws.com/resume/Ferrin+Katz+Resume+V6.pdf"}>
+                                    <div className={'Link-surround-res'}>
+                                        <img src={pdf} className="res-pdf" alt="pdf"/>
+                                    </div>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
                     </tbody>
                 </table>
+
             </div>
         )
     }

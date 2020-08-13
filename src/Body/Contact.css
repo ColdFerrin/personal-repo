@@ -25,3 +25,20 @@
 .form-control{
     width: 50%;
 }
+
+.Link-surround-cont-wrks {
+    text-decoration: none;
+    padding: 6vh 8vh;
+    color: black;
+    text-align: center;
+    position: center;
+    font-family: Garamond, serif;
+    font-size: 18pt;
+}
+
+.Link-cont-wrks {
+    text-align: center;
+    position: center;
+    vertical-align: bottom;
+    margin: 6px;
+}

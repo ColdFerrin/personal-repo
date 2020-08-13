@@ -52,4 +52,25 @@ table {
     }
 }
 
+.Link-res {
+    text-decoration: none;
+    padding: 6vh 8vh .25vh 8vh;
+    color: black;
+}
+
+.btn-res {
+    text-align: center;
+    position: center;
+    font-family: Garamond, serif;
+    font-size: 18pt;
+    vertical-align: top;
+    color: #999999;
+}
+
+.res-pdf{
+    width: 3vw;
+    display:inline-block;
+    padding: 1vh;
+    margin: 0 1vw;
+}
 

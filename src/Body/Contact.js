@@ -14,7 +14,7 @@ export class Contact extends React.Component{
     render () {
         return (
             <div className={"Contact"}>
-            <h2>If you need to contact me?</h2>
+            <h2>If you want to contact me?</h2>
                 <form id="contact-form" onSubmit={this.handleSubmit.bind(this)}>
                     <table>
                         <tbody>
@@ -52,6 +52,18 @@ export class Contact extends React.Component{
                     </table>
                     <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
+                <div className={"btn-cont-wrks"}>
+                    <a style={{textDecoration: 'none', color: 'black'}} href={"https://github.com/ColdFerrin/personal-site-contact-sender"}>
+                        <div className={'Link-surround-cont-wrks'}>
+                            <p className={'Link-cont-wrks'}>
+                                Click Here to See
+                            </p>
+                            <p className={'Link-cont-wrks'}>
+                                How This Page Works
+                            </p>
+                        </div>
+                    </a>
+                </div>
             </div>
         )
     }
