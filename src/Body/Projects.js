@@ -8,7 +8,8 @@ export class Projects extends React.Component{
         super(props);
 
         this.state = {
-            data: []
+            data: [],
+            loading: true
         }
     }
 
@@ -20,20 +21,26 @@ export class Projects extends React.Component{
         })
             .then(res => res.json())
             .then((data) => {
-                this.setState({ data: data })
+                this.setState({ data: data, loading: false })
             })
             .catch(console.error);
     }
 
     render() {
-        return (
-            <div className={'projects'}>
-                {
-                    this.state.data.map((item) => (
-                        <ProjectTile data={item}/>
-                    ))
-                }
-            </div>
-        );
+        if(this.state.loading === true){
+            return (
+                <div className={'loader loadStyle'}/>
+            )
+        } else {
+            return (
+                <div className={'projects'}>
+                    {
+                        this.state.data.map((item) => (
+                            <ProjectTile data={item}/>
+                        ))
+                    }
+                </div>
+            );
+        }
     }
 }

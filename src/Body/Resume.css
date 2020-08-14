@@ -3,12 +3,12 @@
     font-size: 14pt;
     text-align: left;
     vertical-align: top;
+    margin: 14vh 0vw;
 }
 
 table {
     width: 70vw;
     margin: auto;
-    margin-top: 14vh;
     vertical-align: top;
 }
 

@@ -2,5 +2,11 @@
     display: inline-block;
     text-align: center;
     width: 70vw;
-    margin: 1em;
+    margin: 4vh 0;
+}
+
+.loadStyle{
+    display: inline-block;
+    text-align: center;
+    margin: 10vh 0;
 }
