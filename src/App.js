@@ -6,6 +6,7 @@ import {Footer} from "./Footer/Footer";
 import {Contact} from "./Body/Contact";
 import {Index} from "./Body/Index";
 import {Resume} from "./Body/Resume";
+import {Projects} from "./Body/Projects";
 
 class App extends React.Component {
     render() {
@@ -16,6 +17,7 @@ class App extends React.Component {
                     <Switch>
                         <Route path={'/'} exact component={Index}/>
                         <Route path={'/resume'} component={Resume}/>
+                        <Route path={'/projects'} component={Projects}/>
                         <Route path={'/contact'} component={Contact}/>
                     </Switch>
                 </div>

@@ -9,7 +9,7 @@ export class Footer extends React.Component {
     render() {
         return (
             <footer>
-                <div className="Footer">
+                <div className="Footer w3-flat-clouds">
                     <div className="center">
                         <ul>
                             <div className={'img'}>

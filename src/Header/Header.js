@@ -7,7 +7,7 @@ export class Header extends React.Component {
     render() {
         return (
             <header>
-                <div className="Header">
+                <div className="Header w3-flat-clouds">
                     <div className="Header-Box">
                         <div className="Header-Left">
                             <div className="Header-Home">
@@ -25,6 +25,15 @@ export class Header extends React.Component {
                                     <div className={'Link-surround'}>
                                         <p className={'Link'}>
                                             Resume
+                                        </p>
+                                    </div>
+                                </Link>
+                            </div>
+                            <div className={"Header-Projects"}>
+                                <Link to="/projects" style={{textDecoration: 'none', color: 'black'}}>
+                                    <div className={'Link-surround'}>
+                                        <p className={'Link'}>
+                                            Projects
                                         </p>
                                     </div>
                                 </Link>

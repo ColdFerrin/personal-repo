@@ -1,0 +1,32 @@
+.proj {
+    width: 350px;
+    height: 150px;
+    padding: 20px;
+    margin: 25px;
+    display: inline-block;
+    vertical-align: top;
+    horiz-align: left;
+    text-align: center;
+    border: thin solid #999999;
+    /*background: #ddd;*/
+    -webkit-box-shadow: 0 7px 8px rgba(0, 0, 0, 0.10);
+    -moz-box-shadow: 0 7px 8px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 7px 8px rgba(0, 0, 0, 0.10);
+}
+
+.Link-proj {
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+}
+
+.proj:hover {
+    transform: scale(1.1);
+}
+
+.outer {
+    display: inline-block;
+    vertical-align: top;
+    horiz-align: left;
+    text-align: center;
+}
