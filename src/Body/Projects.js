@@ -10,8 +10,6 @@ export class Projects extends React.Component{
         this.state = {
             data: [],
             originalElements: 0,
-            width: 0,
-            height: 0,
             loading: true
         }
 
@@ -28,21 +26,13 @@ export class Projects extends React.Component{
             .then(res => res.json())
             .then((data) => {
                 let active = data;
-                console.log(active)
-                console.log(active.length)
                 let originalLength = active.length;
-                console.log(this.state.width)
-                let maxFit = Math.floor((this.state.width * .7) / 442);
-                console.log('maxFit = ' + maxFit)
+                let maxFit = Math.floor((window.innerWidth * .7) / 442);
                 let extras = ((maxFit > 0) ? (maxFit - (active.length % maxFit)) : 0);
-                console.log('extras = ' + extras)
-                console.log(typeof active)
                 for(let i = 0; i < extras; ++i){
                     active.push({})
-                    console.log('push')
                 }
-                console.log(active.length)
-                this.setState({ data: data, originalElements: originalLength, loading: false })
+                this.setState({ data: active, originalElements: originalLength, loading: false })
             })
             .catch(console.error);
         window.addEventListener('resize', this.updateWindowDimensions)
@@ -53,7 +43,22 @@ export class Projects extends React.Component{
     }
 
     updateWindowDimensions() {
-        this.setState({ width: window.innerWidth, height: window.innerHeight })
+        let active = this.state.data;
+        let originalLength = this.state.originalElements;
+        let maxFit = Math.floor((window.innerWidth * .7) / 442);
+        let extras = ((maxFit > 0) ? (maxFit - (originalLength % maxFit)) : 0);
+        if( (originalLength + extras) > active.length ){
+            let toAdd = (originalLength + extras) - active.length
+            for(let i = 0; i < toAdd; ++i){
+                active.push({})
+            }
+        } else if ((originalLength + extras) < active.length ){
+            let toRemove = active.length - (originalLength + extras)
+            for(let i = 0; i < toRemove; ++i){
+                active.pop()
+            }
+        }
+        this.setState({data: active})
     }
 
     render() {

@@ -6,7 +6,6 @@ export class ProjectTile extends React.Component{
     html_url;
     // noinspection BadExpressionStatementJS
     render() {
-        console.log(this.props)
         if(Object.keys(this.props.data).length === 0 && this.props.data.constructor === Object){
             return(
                 <div className={'outer'}>
