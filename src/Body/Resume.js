@@ -301,7 +301,7 @@ export class Resume extends React.Component {
                                 <p className={'Link-res'}>
                                     Download file
                                 </p>
-                                <a style={{textDecoration: 'none', color: 'black'}} href={"https://ferrin-katz-files.s3.amazonaws.com/resume/Ferrin+Katz+Resume+V6.pdf"}>
+                                <a style={{textDecoration: 'none', color: 'black'}} href={"https://ferrin-katz-files.s3.amazonaws.com/resume/Ferrin+Katz+Resume+V7.pdf"}>
                                     <div className={'Link-surround-res'}>
                                         <img src={pdf} className="res-pdf" alt="pdf"/>
                                     </div>
