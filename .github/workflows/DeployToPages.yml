@@ -57,6 +57,13 @@ jobs:
         ls -la
         pwd
 
+    - name: Add Changes to repo
+      run: |
+        git config user.email "ferrinkatz@ferrinkatz.com"
+        git config user.name "ColdFerrin"
+        git add -A
+        git commit -m "Auto build ${{steps.getdate.outputs.dtVal}}"
+        git push
 
     env:
       CI: true
