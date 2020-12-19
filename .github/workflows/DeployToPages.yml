@@ -30,11 +30,10 @@ jobs:
       id: getdate
       run: echo "::set-output name=dtVal::$(date +'%Y-%m-%d_%H.%M')"
 
-    - name: test1
+    - name: Move build out
       run: |
-        ls -la
-        pwd
-        cd ..
+        mkdir ../build
+        cp -R ./build/* ../build
 
     - name: Commit to ColdFerrin.github.io
       uses: actions/checkout@v2
@@ -42,13 +41,19 @@ jobs:
         repository: 'ColdFerrin/ColdFerrin.github.io'
         ssh-key: '${{ secrets.ssh_key }}'
 
-    - name: test2
+    - name: move to repo
       run: |
         ls -la
         pwd
         cd ..
         ls -la
         pwd
+        cd build
+        ls -la
+        pwd
+        cd ..
+        cp -R build/* personal-repo
+
 
     env:
       CI: true
