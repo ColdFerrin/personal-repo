@@ -16,8 +16,6 @@ export class Index extends React.Component{
                         {/* eslint-disable-next-line no-useless-concat */}
                         <h1 className={"inline-block min-bot-margin"}>I'm</h1><h1 className={"color inline-block left-sp min-bot-margin"}> Ferrin Katz</h1>
                         <h3>Full Stack Software Engineer</h3>
-                        <p>Test</p>
-                        <p>Test</p>
                         <p>I have experience in server and serverless full stack web applications. As well as cloud computing, machine learning, embedded systems, real time systems, and high assurance systems.</p>
                         <h2 className={'color'}>Objective</h2>
                         <p>I am seeking a challenging and competitive full time position in the Los Angeles area, where i can serve your company and develop a fulfilling career.</p>
