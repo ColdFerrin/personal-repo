@@ -30,21 +30,22 @@ jobs:
       id: getdate
       run: echo "::set-output name=dtVal::$(date +'%Y-%m-%d_%H.%M')"
 
-    - name: Add Changes to repo
+    - name: test1
       run: |
-        git config user.email "ferrinkatz@ferrinkatz.com"
-        git config user.name "ColdFerrin"
-        git add -A
-        git commit -m "Auto build ${{steps.getdate.outputs.dtVal}}"
-        git push
+        ls -la
+        pwd
 
-    - name: Deploy
-      uses: s0/git-publish-subdir-action@master
-      env:
-        REPO: git@github.com:ColdFerrin/ColdFerrin.github.io.git
-        BRANCH: master
-        FOLDER: build
-        SSH_PRIVATE_KEY: ${{ secrets.ssh_key }}
+    - name: Commit to ColdFerrin.github.io
+    - uses: actions/checkout@v2
+      with:
+        repository: 'git@github.com:ColdFerrin/ColdFerrin.github.io.git'
+        ssh-key: '${{ secrets.ssh_key }}'
+
+    - name: test2
+        run: |
+          cd ..
+          ls -la
+          pwd
 
     env:
       CI: true
