@@ -53,6 +53,9 @@ jobs:
         pwd
         cd ..
         cp -R build/* personal-repo
+        cd personal-repo
+        ls -la
+        pwd
 
 
     env:
