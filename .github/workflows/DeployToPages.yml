@@ -39,7 +39,7 @@ jobs:
     - name: Commit to ColdFerrin.github.io
       uses: actions/checkout@v2
       with:
-        repository: 'git@github.com:ColdFerrin/ColdFerrin.github.io.git'
+        repository: 'ColdFerrin/ColdFerrin.github.io'
         ssh-key: '${{ secrets.ssh_key }}'
 
     - name: test2
