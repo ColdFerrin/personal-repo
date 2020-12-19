@@ -30,7 +30,7 @@ jobs:
       id: getdate
       run: echo "::set-output name=dtVal::$(date +'%Y-%m-%d_%H.%M')"
 
-    - name: Move build out
+    - name: Move build to seperate directory
       run: |
         mkdir ../build
         cp -R ./build/* ../build
@@ -41,21 +41,11 @@ jobs:
         repository: 'ColdFerrin/ColdFerrin.github.io'
         ssh-key: '${{ secrets.ssh_key }}'
 
-    - name: move to repo
+    - name: move build to deployment repo
       run: |
-        ls -la
-        pwd
-        cd ..
-        ls -la
-        pwd
-        cd build
-        ls -la
-        pwd
         cd ..
         cp -R build/* personal-repo
         cd personal-repo
-        ls -la
-        pwd
 
     - name: Add Changes to repo
       run: |
@@ -63,7 +53,7 @@ jobs:
         git config user.name "ColdFerrin"
         git add -A
         git commit -m "Auto build ${{steps.getdate.outputs.dtVal}}"
-        git push
+        git push || true
 
     env:
       CI: true
