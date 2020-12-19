@@ -34,6 +34,7 @@ jobs:
       run: |
         ls -la
         pwd
+        cd ..
 
     - name: Commit to ColdFerrin.github.io
     - uses: actions/checkout@v2
@@ -42,10 +43,12 @@ jobs:
         ssh-key: '${{ secrets.ssh_key }}'
 
     - name: test2
-        run: |
-          cd ..
-          ls -la
-          pwd
+      run: |
+        ls -la
+        pwd
+        cd ..
+        ls -la
+        pwd
 
     env:
       CI: true
