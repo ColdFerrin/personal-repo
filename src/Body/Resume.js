@@ -29,11 +29,21 @@ export class Resume extends React.Component {
                     </tr>
                     <tr>
                         <td className="Section-Header">
-                            <p>RELAVENT EXPERIENCE</p>
+                            <p>SUMMARY</p>
                         </td>
                         <td colSpan={3}>
-                            <p>Operating Systems, File systems & Databases, Organization of Programming languages,
-                                Analysis and Design of Software Systems, Software Quality Assurance</p>
+                            <ul>
+                                <li>Software Engineer with experience working in Full Stack web development, Embedded Software,
+                                    Machine Learning, Computer Vision, and Real Time Systems.
+                                </li>
+                                <li>4 Years of Full Stack web development experience: SQL and NoSQL Database design,
+                                    Web server Design and implementation, API Ingestion, UI Implementation, CI/CD, and
+                                    containerization.
+                                </li>
+                                <li>2 Years of Embedded Software Development experience: High Rate data collection,
+                                    Sensor Interfacing, and embedded deployment.
+                                </li>
+                            </ul>
                         </td>
                     </tr>
 
@@ -301,7 +311,7 @@ export class Resume extends React.Component {
                                 <p className={'Link-res'}>
                                     Download file
                                 </p>
-                                <a style={{textDecoration: 'none', color: 'black'}} href={"https://ferrin-katz-files.s3.amazonaws.com/resume/Ferrin+Katz+Resume+V7.pdf"}>
+                                <a style={{textDecoration: 'none', color: 'black'}} href={"https://ferrin-katz-files.s3.amazonaws.com/resume/Ferrin+Katz+Resume+V8.pdf"}>
                                     <div className={'Link-surround-res'}>
                                         <img src={pdf} className="res-pdf" alt="pdf"/>
                                     </div>
