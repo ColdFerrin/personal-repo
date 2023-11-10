@@ -28,8 +28,7 @@
 }
 
 .outer {
-    display: inline-block;
+    align-self: center;
     vertical-align: top;
-    horiz-align: left;
     text-align: center;
 }

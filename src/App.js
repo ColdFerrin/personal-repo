@@ -1,31 +1,27 @@
 import React from 'react';
-import {Switch, Route} from "react-router-dom";
+import {Route, Routes} from "react-router-dom";
 import './App.css';
 import {Header} from './Header/Header'
 import {Footer} from "./Footer/Footer";
 import {Contact} from "./Body/Contact";
-import {Index} from "./Body/Index";
+import {Index} from "./Body";
 import {Resume} from "./Body/Resume";
 import {Projects} from "./Body/Projects";
 
-class App extends React.Component {
-    render() {
-        return (
-            <div className="App">
-                <Header/>
-                <div className="Body">
-                    <Switch>
-                        <Route path={'/'} exact component={Index}/>
-                        <Route path={'/resume'} component={Resume}/>
-                        <Route path={'/projects'} component={Projects}/>
-                        <Route path={'/contact'} component={Contact}/>
-                    </Switch>
-                </div>
-                <Footer/>
-
+export function App() {
+    return (
+        <div className="App">
+            <Header/>
+            <div className="Body">
+                <Routes>
+                    <Route path={'/'} element={<Index />}/>
+                    <Route path={'/resume'} element={<Resume />}/>
+                    <Route path={'/projects'} element={<Projects />}/>
+                    <Route path={'/contact'} element={<Contact />}/>
+                </Routes>
             </div>
-        );
-    }
-}
+            <Footer/>
 
-export default App;
+        </div>
+    );
+}
