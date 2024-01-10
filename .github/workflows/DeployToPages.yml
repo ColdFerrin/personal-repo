@@ -36,7 +36,7 @@ jobs:
         cp -R ./build/* ../build
 
     - name: Commit to ColdFerrin.github.io
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         repository: 'ColdFerrin/ColdFerrin.github.io'
         ssh-key: '${{ secrets.ssh_key }}'
