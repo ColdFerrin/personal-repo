@@ -1,83 +1,48 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# personal-repo
 
-## Available Scripts
+Personal portfolio site built with **Vite + React + TypeScript**, deployed to [ferrinkatz.com](https://ferrinkatz.com).
 
-In the project directory, you can run:
+## Tech Stack
 
-### `npm start`
+- [React 18](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [React Router v6](https://reactrouter.com/)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Getting Started
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+### Install dependencies
 
-### `npm test`
+```bash
+npm install
+```
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Run in development mode
 
-### `npm run build`
+```bash
+npm start
+```
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Opens at [http://localhost:5173](http://localhost:5173).
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+### Build for production
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm run build
+```
 
-### `npm run eject`
+Output goes to the `build` folder.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Preview production build
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm run preview
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Deployment
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Pushes to `master` automatically trigger the [Deploy to Pages](.github/workflows/DeployToPages.yml) GitHub Actions workflow, which:
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-"# personal-repo" 
-
-## Build Github Page
-
-1) `npm run build`
-
-1) `git checkout -- build/CNAME`
-
-1) `git add -A`
-
-1) `git commit`
-
-1) `git push`
-
-1) `git subtree push --prefix=build https://github.com/ColdFerrin/ColdFerrin.github.io.git master`
+1. Installs dependencies and runs `tsc && vite build`
+2. Copies the build output to the [ColdFerrin.github.io](https://github.com/ColdFerrin/ColdFerrin.github.io) repository
+3. Commits and pushes the new build with an auto-generated timestamp message

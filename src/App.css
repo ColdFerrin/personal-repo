@@ -1,9 +1,10 @@
 .App {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .Body {
-    text-align: center;
-    margin: 100px 0 175px;
+    flex: 1;
+    padding-bottom: 48px; /* footer height */
 }
-

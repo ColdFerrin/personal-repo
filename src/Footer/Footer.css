@@ -1,43 +1,51 @@
+/* ── Site Footer ─────────────────────────────────────────── */
 .Footer {
-    display: flex;
-    justify-content: center;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    z-index: 10;
-
-    -webkit-box-shadow: 0 7px 8px rgba(0, 0, 0, 0.12);
-    -moz-box-shadow: 0 7px 8px rgba(0, 0, 0, 0.12);
-    box-shadow: 0 7px 8px rgba(0, 0, 0, 0.12);
+    z-index: 100;
+    background: var(--paper);
+    border-top: 1px solid var(--rule);
 }
 
-.Footer .img{
-    display:inline-block;
-    padding: 1vh;
-    margin: 0 10vw;
+.Footer .center {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
 }
 
 .Footer ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
     padding: 0;
+    margin: 0;
+}
+
+.Footer .img {
+    display: flex;
+    align-items: center;
 }
 
 .Footer-github,
 .Footer-linkedin,
-.Footer-twitter{
-    height: 8vh;
+.Footer-twitter {
+    height: 20px;
+    width: auto;
+    display: block;
+    opacity: 0.5;
+    transition: opacity 0.2s;
 }
 
-@media (max-width: 800px) {
-    .Footer .img  {
-        margin: 0 6vw;
-    }
+.Footer .img a:hover .Footer-github,
+.Footer .img a:hover .Footer-linkedin,
+.Footer .img a:hover .Footer-twitter {
+    opacity: 1;
 }
-
-@media (max-width: 560px) {
-    .Footer .img {
-        margin: 0 3vw;
-    }
-}
-
 

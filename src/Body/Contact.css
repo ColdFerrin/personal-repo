@@ -1,45 +1,142 @@
-.Contact{
-    width: 100%;
-    text-align: center;
-    margin: 14vh 0;
-}
-
-#contact-form{
-    display: inline-block;
+/* ── Contact Page ────────────────────────────────────────── */
+.Contact {
+    max-width: 860px;
     margin: 0 auto;
-    padding: 3px;
-    width: 70%;
-}
-
-.left{
-    float: left;
-    width: 36%;
-    text-align: right;
-}
-
-.right{
-    float: right;
-    width: 63%;
+    padding: 2rem 2rem 6rem;
     text-align: left;
 }
 
-.form-control{
-    width: 50%;
+.Contact h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 2rem;
+    padding-bottom: var(--gap);
+    border-bottom: 2px solid var(--ink);
+}
+
+#contact-form {
+    display: block;
+    width: 100%;
+    max-width: 560px;
+}
+
+.form-group {
+    display: grid;
+    grid-template-columns: 10rem 1fr;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-bottom: 1.1rem;
+}
+
+.left {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: right;
+    padding-right: 1rem;
+    border-right: 1px solid var(--rule);
+    float: none;
+    width: auto;
+}
+
+.right {
+    float: none;
+    width: auto;
+    text-align: left;
+}
+
+.form-control {
+    width: 100%;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    padding: 0.45rem 0.7rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 300;
+    color: var(--ink);
+    transition: border-color 0.2s;
+    outline: none;
+}
+
+.form-control:focus {
+    border-color: var(--accent);
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.55rem 1.4rem;
+    border-radius: 2px;
+    border: 1px solid var(--ink);
+    background: var(--ink);
+    color: var(--paper);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    background: var(--paper);
+    color: var(--ink);
+}
+
+/* "How This Page Works" link */
+.btn-cont-wrks {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
 }
 
 .Link-surround-cont-wrks {
-    text-decoration: none;
-    padding: 6vh 8vh;
-    color: black;
-    text-align: center;
-    position: center;
-    font-family: Garamond, serif;
-    font-size: 18pt;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 0.1rem;
 }
 
 .Link-cont-wrks {
-    text-align: center;
-    position: center;
-    vertical-align: bottom;
-    margin: 6px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    transition: color 0.2s;
+    margin: 0;
+}
+
+.btn-cont-wrks a:hover .Link-cont-wrks {
+    color: var(--ink);
+}
+
+@media (max-width: 640px) {
+    .Contact {
+        padding: 2rem 1.25rem 4rem;
+    }
+
+    .form-group {
+        grid-template-columns: 1fr;
+        gap: 0.3rem;
+    }
+
+    .left {
+        text-align: left;
+        border-right: none;
+        border-bottom: 1px solid var(--rule);
+        padding-right: 0;
+        padding-bottom: 0.2rem;
+    }
 }

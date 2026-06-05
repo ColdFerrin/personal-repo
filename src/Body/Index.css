@@ -1,77 +1,121 @@
+/* ── Home / Index Page ───────────────────────────────────── */
 .Body-Box {
-    display: inline-block;
-    width: 70%;
-    margin: 4vh 0vw;
-    vertical-align: top;
-}
-
-.Body-Left,
-.Body-Right {
-    display:inline-block;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem 2rem 6rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 3rem;
+    align-items: start;
 }
 
 .Body-Left {
-    width: 20vw;
-    float: Left;
-}
-
-.Body-Right {
-    width: 45vw;
-    float: right;
-}
-
-.Body-Content {
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .Body-Img {
-    align-content: center;
-    width: 18vw;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 2px;
+    border: 1px solid var(--rule);
+    display: block;
+}
+
+.Body-Right {
+    display: flex;
+    flex-direction: column;
+}
+
+.Body-Content h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.25rem;
+}
+
+.Body-Content h2 {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.Body-Content h2::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+}
+
+.Body-Content h3 {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    margin-bottom: 1.25rem;
+}
+
+.Body-Content p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: var(--ink);
+    max-width: 60ch;
+    margin-bottom: 0.75rem;
 }
 
 .color {
-    color: #95a5a6;
-}
-
-.left-sp {
-    margin: 0 0 0 5pt;
-}
-
-.min-bot-margin {
-    margin-bottom: .1em;
+    color: var(--accent);
 }
 
 .inline-block {
-    display: inline-block;
+    display: inline;
 }
 
-h1 {
-    font-size: 50px;
+.left-sp {
+    margin-left: 0.35rem;
 }
 
-.signature {
-    width: 15vw;
+.min-bot-margin {
+    margin-bottom: 0;
 }
 
 .fancy-font {
-    font-family: 'Rouge Script', cursive;
-    font-size: 30px;
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 1.6rem;
+    color: var(--accent);
+    margin-top: 0.25rem;
+}
+
+.signature {
+    width: 140px;
 }
 
 @media (max-width: 680px) {
     .Body-Box {
-        width: 100%;
-        text-align: center;
-        margin: auto;
+        grid-template-columns: 1fr;
+        padding: 1.25rem 1.25rem 4rem;
+        gap: 2rem;
     }
 
     .Body-Left {
-        width: 45vw;
-        float: Left;
+        align-items: flex-start;
     }
 
     .Body-Img {
-        align-content: center;
-        width: 44vw;
+        width: 120px;
+        height: 120px;
     }
 }

@@ -1,77 +1,247 @@
-.Resume {
-    font-family: Garamond, serif;
-    font-size: 14pt;
+
+/* ── Page Shell ──────────────────────────────────────────── */
+.page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem 2rem 6rem;
     text-align: left;
-    vertical-align: top;
-    margin: 14vh 0vw;
 }
 
-table {
-    width: 70vw;
-    margin: auto;
-    vertical-align: top;
+/* ── Header ──────────────────────────────────────────────── */
+header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 1rem;
+    padding-bottom: var(--gap);
+    border-bottom: 2px solid var(--ink);
+    margin-bottom: var(--gap);
 }
 
-.Resume .Title {
-    font-size: 20pt;
-    text-align: center;
+.name {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2.8rem, 7vw, 4.6rem);
+    line-height: 1.0;
+    letter-spacing: -0.02em;
 }
 
-.Resume .Center {
-    text-align: center;
+.name em {
+    font-style: italic;
+    color: var(--accent);
 }
 
-.Resume .Section-Header {
-    display: inline-block;
-    position: relative;
-    font-weight: bold;
+.contact {
+    text-align: right;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    line-height: 1.9;
+    color: var(--muted);
 }
 
-.Resume .Section-Info {
-    display: inline-block;
-    position: relative;
-}
-
-.Resume p {
-    margin: 5px;
-}
-
-@media (max-width: 750px) {
-    table {
-        width: 95vw;
-    }
-}
-
-@media (max-width: 470px) {
-    .Resume {
-        font-size: 10pt;
-    }
-
-    .Resume .Title {
-        font-size: 14pt;
-        text-align: center;
-    }
-}
-
-.Link-res {
+.contact a {
+    color: var(--muted);
     text-decoration: none;
-    padding: 6vh 8vh .25vh 8vh;
-    color: black;
+    transition: color 0.2s;
+}
+.contact a:hover { color: var(--ink); }
+
+/* ── Section ─────────────────────────────────────────────── */
+section {
+    margin-bottom: calc(var(--gap) * 1.25);
 }
 
-.btn-res {
-    text-align: center;
-    position: center;
-    font-family: Garamond, serif;
-    font-size: 18pt;
-    vertical-align: top;
-    color: #999999;
+.section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
 }
 
-.res-pdf{
-    width: 3vw;
-    display:inline-block;
-    padding: 1vh;
-    margin: 0 1vw;
+.section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
 }
 
+/* ── Summary ─────────────────────────────────────────────── */
+.summary p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    max-width: 72ch;
+    text-align: left;
+}
+
+/* ── Education ───────────────────────────────────────────── */
+.edu-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.edu-degree {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.edu-school {
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin-top: 0.15rem;
+}
+
+.edu-meta {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--muted);
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* ── Skills ──────────────────────────────────────────────── */
+.skills-grid {
+    display: grid;
+    gap: 0.65rem;
+}
+
+.skill-row {
+    display: grid;
+    grid-template-columns: 13rem 1fr;
+    gap: 1rem;
+    align-items: baseline;
+    font-size: 0.88rem;
+}
+
+.skill-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--muted);
+    text-align: right;
+    padding-right: 1rem;
+    border-right: 1px solid var(--rule);
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+}
+
+.tag {
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.67rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: 2px;
+    white-space: nowrap;
+}
+
+/* ── Experience ──────────────────────────────────────────── */
+.job {
+    padding: 1.4rem 0;
+    border-bottom: 1px solid var(--rule);
+}
+
+.job:last-child { border-bottom: none; }
+
+.job-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.5rem 1rem;
+    align-items: start;
+    margin-bottom: 0.85rem;
+}
+
+.job-title {
+    font-size: 0.98rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.job-company {
+    font-size: 0.82rem;
+    color: var(--accent);
+    font-weight: 400;
+    margin-top: 0.15rem;
+}
+
+.job-meta {
+    text-align: right;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--muted);
+    line-height: 1.8;
+    flex-shrink: 0;
+}
+
+.job-bullets {
+    list-style: none;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.job-bullets li {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    padding-left: 1.1rem;
+    position: relative;
+    color: #2a2823;
+}
+
+.job-bullets li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--rule);
+    font-weight: 300;
+}
+
+/* ── Print ───────────────────────────────────────────────── */
+@media print {
+    body { background: white; font-size: 10pt; }
+    .page { padding: 1rem; max-width: 100%; }
+    .tag { border: 1px solid #ccc; background: white; }
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 640px) {
+    .page { padding: 2rem 1.25rem 4rem; }
+
+    header {
+        grid-template-columns: 1fr;
+    }
+
+    .contact { text-align: left; }
+
+    .skill-row {
+        grid-template-columns: 1fr;
+        gap: 0.35rem;
+    }
+
+    .skill-label {
+        text-align: left;
+        border-right: none;
+        border-bottom: 1px solid var(--rule);
+        padding-right: 0;
+        padding-bottom: 0.25rem;
+    }
+
+    .job-header {
+        grid-template-columns: 1fr;
+    }
+
+    .job-meta { text-align: left; }
+
+    .edu-row {
+        grid-template-columns: 1fr;
+    }
+}
