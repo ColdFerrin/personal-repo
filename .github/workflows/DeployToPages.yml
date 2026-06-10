@@ -29,7 +29,7 @@ jobs:
 
     - name: Get Current DateTime
       id: getdate
-      run: echo "::set-output name=dtVal::$(date +'%Y-%m-%d_%H.%M')"
+      run: echo "dtVal=$(date +'%Y-%m-%d_%H.%M')" >> $GITHUB_OUTPUT
 
     - name: Move build to seperate directory
       run: |
