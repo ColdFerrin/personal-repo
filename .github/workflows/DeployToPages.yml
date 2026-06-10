@@ -24,6 +24,7 @@ jobs:
       with:
         node-version: '24.x'
     - run: npm install
+    - run: npm install -g typescript vite
     - run: tsc && vite build
 
     - name: Get Current DateTime
